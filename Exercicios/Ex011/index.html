@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tentar abrir o site em dispositivos diferentes ou em diferentes tamanhos de janela, utilizando as tags &lt;picture&gt; e &lt;source&gt;.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="Imagens/P.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/M.png" type="image/png">
+        <img src="Imagens/G.png" alt="Foto Maior">
+    </picture>
+    <h1>Reproduzindo Áudios</h1>
+    <p>Este é um exemplo de reprodução de áudio em HTML5, usando a tag &lt;audio&gt;</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/Não, roubaram meu pau. Capado, castrado Compondo música em entrevista no Canal Brasil..mp3" type="audio/mp3">
+        <source src="midia/Não, roubaram meu pau. Capado, castrado Compondo música em entrevista no Canal Brasil..ogg" type="audio/ogg">
+        <source src="midia/Não, roubaram meu pau. Capado, castrado Compondo música em entrevista no Canal Brasil..wav" type="audio/wav">
+    </audio>
+</body>
+</html>
