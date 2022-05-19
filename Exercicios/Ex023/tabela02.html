@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 20%;
+        }
+        thead{
+            background-color: green;
+            color: white;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 2%;
+        }
+        tr{
+            border: 1px solid black;
+        }
+        .num{
+            text-align: right;
+        }
+        tfoot{
+            background-color: rgb(255, 255, 115);
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--Anatomia para tabelas grandes:
+            Table  
+                THead
+                    Tr
+                        Td/Th
+                TBody
+                    Tr
+                        Td/Th
+                TFoot
+                    Tr
+                        Td/Th
+    -->
+    <table>
+        <thead>
+            <th>Estado</th>
+            <th>PIB</th>
+        </thead>
+            
+        <tbody>
+            <tr>
+                <td>Brasília</td>
+                <td class="num">90.742,75</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">51.140,82</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">45.174,08</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th>PIB Total</th>
+            <td class="num"><strong>187.057,65</strong></td>
+        </tfoot>
+    </table>
+</body>
+</html>
