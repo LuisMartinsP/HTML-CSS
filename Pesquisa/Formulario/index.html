@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(90deg, rgb(10, 110, 255), rgb(17, 54, 71));
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(0, 0, 97);
+            color: white;
+            padding: 15px;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 400px;
+        }
+        fieldset{
+            border: 5px solid rgb(10, 110, 255);
+            border-radius: 10px;
+        }
+        legend{
+            background-color:rgb(10, 110, 255);
+            padding: 10px;
+            border: 1px solid rgb(10, 110, 255);
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .inputBox{
+            position: relative;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .inputuser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            font-size: 15px;
+            outline: none;
+            color: white;
+            width: 100%;
+        }
+        .labelinput{
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputuser:focus ~ .labelinput, .inputuser:valid ~ .labelinput{
+            top: -20px;
+            font-size: 12px;
+            color:rgb(10, 110, 255);
+        }
+        #datanasc{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        #submit{
+            width: 100%;
+            background: linear-gradient(90deg, rgb(0, 161, 214), rgb(126, 0, 126));
+            padding: 5px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #submit:hover{
+            background: linear-gradient(90deg, rgb(3, 141, 187), rgb(102, 0, 102));  
+        }
+        #reset{
+            width: 100%;
+            font-size: 10px;
+            background: none;
+            border: none;
+            color:white;
+            text-align: center;
+            cursor: pointer;
+        }
+        #reset:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend>Formulário para cadastro</legend>
+                <div class="inputBox">
+                    <input type="text" name="nome" class="inputuser" required>
+                    <label for="nome" class="labelinput">Nome Completo</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="email" class="inputuser" required>
+                    <label for="email" class="labelinput">E-mail</label>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" class="inputuser" required>
+                    <label for="telefone" class="labelinput">Telefone</label>
+                </div>
+                <p>Sexo:</p>
+                <input type="radio" name="genero" required>
+                <label for="Masculino">Masculino</label>
+                <input type="radio" name="genero" required>
+                <label for="Feminino">Feminino</label>
+                <div class="inputBox">
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" name="data_nascimento" id="datanasc"required> 
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="login" class="inputuser" required>
+                    <label for="login" class="labelinput">Login</label>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="senha" class="inputuser" required>
+                    <label for="senha" class="labelinput">Senha</label>
+                </div>
+                <input type="submit" name="submit" id="submit">
+                <input type="reset" value="Limpar" id="reset">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
